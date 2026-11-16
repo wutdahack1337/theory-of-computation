@@ -1,0 +1,16 @@
+# Tap cac trang thai
+0, 1, 2
+# Bang chu cai
+0, 1
+# Trang thai bat dau
+0
+# Tap trang thai ket thuc
+0
+# Ham chuyen trang thai: state, input -> next_state
+0, 0 -> 0
+0, 1 -> 1
+1, 0 -> 2
+1, 1 -> 0
+2, 0 -> 1
+2, 1 -> 2
+
