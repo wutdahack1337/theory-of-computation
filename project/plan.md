@@ -71,9 +71,9 @@ Màn 8  NFA → DFA — visualize subset construction
 
 ## Phân công
 
-**Minh (A):** FA engine, ATM, Pattern Matching, viết báo cáo LaTeX.
+**Minh:** FA engine, ATM, Pattern Matching, viết báo cáo LaTeX.
 
-**Hân (B):** Traffic Light, Vending Machine, làm slides.
+**Hân:** Traffic Light, Vending Machine, làm slides.
 
 ---
 
@@ -81,14 +81,14 @@ Màn 8  NFA → DFA — visualize subset construction
 
 ### Stage 1 — Setup + engine cơ bản
 
-**Minh (A):**
+**Minh:**
 - Tạo cấu trúc thư mục `src/`, `screens/`, `assets/`
 - Tách `DFA`, `NFA` class ra file riêng `src/fa_engine.py`, thêm method trả về transition log từng bước
 - Viết `src/atm.py` — Moore machine cho ATM
 - Viết `src/pattern_search.py` — NFA match + NFA→DFA
 - Dựng Tkinter skeleton: navigation + 8 màn placeholder, Màn 1 (Home) xong hoàn toàn
 
-**Hân (B):**
+**Hân:**
 - Thống nhất color scheme, font, layout chung với Minh
 - Viết `src/controller.py` — DFA cho traffic light và vending machine (Minh hỗ trợ nếu cần)
 - Bắt đầu đọc qua tài liệu FA cơ bản để hiểu context khi làm slides
@@ -99,11 +99,11 @@ Xong stage 1 khi: chạy được app → vào được Màn 1 → click sang c�
 
 ### Stage 2 — Làm 8 màn hình
 
-**Minh (A):**
+**Minh:**
 - Màn 4+5: ATM — logic state machine, test case lỗi (sai PIN 3 lần)
 - Màn 7+8: Pattern Search + NFA→DFA visualization
 
-**Hân (B):**
+**Hân:**
 - Màn 2+3: Traffic Light — animation + step mode
 - Màn 6: Vending Machine — UI + logic coin (dùng `controller.py` đã viết ở Stage 1)
 
