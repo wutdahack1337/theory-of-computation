@@ -174,7 +174,7 @@ Xong stage 2 khi: tất cả 8 màn chạy được, không crash.
 
 ---
 
-### Stage 4 — Slide + rehearsal
+### Stage 4 — Slide
 
 **Hân** làm slide theo cấu trúc yêu cầu. Minh review nội dung kỹ thuật, sửa chỗ nào giải thích sai.
 
@@ -214,12 +214,10 @@ Xong stage 2 khi: tất cả 8 màn chạy được, không crash.
    - Các nguồn tham khảo khác (ghi theo chuẩn IEEE hoặc APA)
 ```
 
-Slide dùng PowerPoint hoặc Google Slides cho nhanh. Nếu Hân muốn học Beamer thì dùng Beamer.
+Slide dùng Google Slides cho nhanh.
 
 **Minh** trình bày phần demo app live (ATM, Pattern Matching).
 **Hân** trình bày phần lý thuyết + Traffic Light + Vending Machine.
-
-Chạy rehearsal 1 lần trước khi nộp.
 
 ---
 
