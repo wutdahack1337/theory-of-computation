@@ -116,55 +116,102 @@ Xong stage 2 khi: tất cả 8 màn chạy được, không crash.
 **Minh** viết toàn bộ báo cáo. Hân cung cấp ảnh chụp màn hình Traffic Light + Vending Machine để đưa vào báo cáo.
 
 ```
-Chương 1: Giới thiệu
-  - FA là gì, DFA vs NFA
-  - Tại sao FA quan trọng trong thực tế
+1. Giới thiệu
+   - FA là gì, lịch sử hình thành
+   - DFA vs NFA — điểm giống và khác nhau
+   - Ứng dụng FA trong thực tế (tổng quan)
 
-Chương 2: Ứng dụng 1 — Đèn giao thông
-  - Mô hình hóa bằng DFA
-  - Bảng transition function
-  - Hình minh họa (export từ app)
+2. Mục tiêu bài toán
+   - Mô phỏng 4 hệ thống thực tế bằng FA
+   - Xây dựng giao diện demo trực quan (8 màn hình)
+   - Minh chứng FA không chỉ là lý thuyết
 
-Chương 3: Ứng dụng 2 — ATM
-  - Mô hình Moore machine
-  - Diagram state + transition
-  - Test case
+3. Phương pháp thực hiện
+   - Quy trình mô hình hóa: bài toán thực → FA
+     (xác định states, alphabet, transition function, accept states)
+   - DFA cho hệ thống tuần tự (Traffic Light, Vending Machine)
+   - Moore machine cho hệ thống có output (ATM)
+   - NFA + NFA→DFA conversion cho Pattern Matching
+   - Công cụ: Python 3, Tkinter, tikz (vẽ diagram trong báo cáo)
 
-Chương 4: Ứng dụng 3 — Vending Machine
-  - DFA nhận coin
-  - Xử lý tiền thừa
+4. Thiết kế và cài đặt
+   4.1 Traffic Light
+       - State diagram, bảng transition function
+       - Cài đặt DFA, animation màn hình
+   4.2 ATM
+       - Moore machine diagram, bảng transition
+       - Xử lý test case: sai PIN 3 lần → khóa thẻ
+   4.3 Vending Machine
+       - DFA nhận coin 5k/10k/20k, state = tổng tiền
+       - Xử lý tiền thừa khi vượt mệnh giá
+   4.4 Pattern Matching
+       - Xây dựng NFA từ pattern
+       - Subset construction: NFA → DFA
+       - Highlight kết quả match trong text
 
-Chương 5: Ứng dụng 4 — Pattern Matching
-  - Xây dựng NFA từ pattern
-  - Chuyển NFA → DFA
-  - So sánh độ phức tạp
+5. Kết quả đạt được
+   - Ảnh chụp từng màn hình demo
+   - Nhận xét: ưu/nhược điểm FA khi áp dụng thực tế
+   - So sánh NFA vs DFA trong Pattern Matching (độ phức tạp)
 
-Chương 6: Kết luận
-  - Nhận xét về FA trong thực tế
-  - Hướng mở rộng
+6. Hướng phát triển
+   - Mở rộng ATM: chuyển khoản, nhiều loại thẻ, timeout session
+   - Pattern Matching: hỗ trợ regex đầy đủ, Aho-Corasick nhiều pattern
+   - Tích hợp epsilon-NFA để xử lý bài toán phức tạp hơn
+   - Áp dụng FA vào các bài toán lớn hơn: lexer compiler, network protocol
+
+7. Tài liệu tham khảo
+   - Giáo trình môn Lý thuyết tính toán
+   - Introduction to the Theory of Computation — Michael Sipser
+   - Các nguồn khác (ghi theo chuẩn IEEE)
 ```
 
 **Workflow LaTeX:**
 - Dùng Overleaf hoặc local TeX Live
-- Template: `\documentclass[12pt]{report}` hoặc tìm template báo cáo của trường
-- Vẽ state diagram bằng package `tikz` + `automata` (đẹp hơn vẽ tay)
+- Template: `\documentclass[12pt]{report}` hoặc template báo cáo của trường
+- Vẽ state diagram bằng package `tikz` + `automata`
+- Mỗi app là 1 subsection trong mục 4, dùng `\input{chapters/...}` để chia file (đẹp hơn vẽ tay)
 
 ---
 
 ### Stage 4 — Slide + rehearsal
 
-**Hân** làm slide theo outline dưới. Minh review nội dung kỹ thuật, sửa chỗ nào giải thích sai.
+**Hân** làm slide theo cấu trúc yêu cầu. Minh review nội dung kỹ thuật, sửa chỗ nào giải thích sai.
 
 ```
-Trang 1    Trang bìa
-Trang 2    FA là gì — tóm tắt lý thuyết ngắn gọn
-Trang 3    Overview 4 ứng dụng
-Trang 4-5  Traffic Light — diagram + ảnh chụp app
-Trang 6-7  ATM — diagram + demo live
-Trang 8-9  Vending Machine — diagram + demo live
-Trang 10-11 Pattern Matching — NFA→DFA, highlight result
-Trang 12   Kết luận
-Trang 13   Q&A
+1. Giới thiệu
+   - FA là gì, DFA vs NFA (tóm tắt ngắn)
+   - Tại sao FA xuất hiện trong thực tế
+   - Overview 4 ứng dụng sẽ trình bày
+
+2. Mục tiêu bài toán
+   - Mục tiêu từng app: mô phỏng hệ thống thực tế bằng FA
+   - Yêu cầu demo: 8 màn hình giao diện tương tác
+
+3. Phương pháp thực hiện
+   - Mô hình hóa bài toán thực tế thành DFA/NFA
+   - Các bước: xác định states → alphabet → transition function → accept states
+   - Lý do chọn Python + Tkinter
+
+4. Thiết kế và cài đặt
+   - Traffic Light: state diagram, bảng transition, ảnh chụp app
+   - ATM: Moore machine diagram, bảng transition, test case sai PIN
+   - Vending Machine: DFA nhận coin, xử lý tiền thừa, ảnh chụp app
+   - Pattern Matching: NFA từ pattern, NFA→DFA conversion, ảnh highlight kết quả
+
+5. Kết quả đạt được
+   - Demo live từng app (hoặc ảnh chụp nếu không demo trực tiếp)
+   - Nhận xét: FA phù hợp với dạng bài toán nào
+
+6. Hướng phát triển
+   - Mở rộng ATM: thêm giao dịch chuyển khoản, nhiều loại thẻ
+   - Mở rộng Pattern Matching: hỗ trợ regex đầy đủ
+   - Tích hợp epsilon-NFA để xử lý bài toán phức tạp hơn
+
+7. Tài liệu tham khảo
+   - Giáo trình môn học
+   - Introduction to the Theory of Computation — Michael Sipser
+   - Các nguồn tham khảo khác (ghi theo chuẩn IEEE hoặc APA)
 ```
 
 Slide dùng PowerPoint hoặc Google Slides cho nhanh. Nếu Hân muốn học Beamer thì dùng Beamer.
