@@ -1,4 +1,6 @@
-﻿# Byte-compiled / optimized / DLL files
+﻿project/tex_template/
+
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *.class
